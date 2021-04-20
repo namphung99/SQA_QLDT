@@ -1,0 +1,184 @@
+/* nav{
+    padding: 16px 0 !important;
+    position:fixed !important; 
+    z-index: 1;
+    width: 100%;
+    top: 0;
+} */
+
+.header{
+    position:fixed;
+    z-index: 1;
+    height:100px;
+    width: 100%;
+    background-color: rgb(29, 191, 175);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app{
+    padding-top: 130px;
+    background-color: #f1f1f1;
+    min-height: 100vh;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo{
+    margin-right: 12px;
+}
+
+.menu-item{
+    color: rgba(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-item:hover{
+    text-decoration: none;
+    color: rgba(255, 255, 255,.8);
+}
+
+.user-name{
+    color: #fff;font-size:16px;
+}
+
+.title{
+    text-align: center;
+    padding: 20px 0;
+}
+
+table,
+.add-form{
+    margin: 0 12px;
+}
+.navbar-logo{
+    width: 50px;
+    border-radius:50%;
+}
+
+.control{
+    display: flex;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.form-class,
+.form-subject{
+    display: flex;
+    align-items: center;  
+}
+
+.form-subject{
+    margin-right: 50px;
+}
+
+.control-title{
+    margin-right: 12px;
+}
+
+.form-group{
+    margin-bottom: 0;
+    width:160px;
+}
+
+.add-form button,
+.form-class button,
+.form-subject button{
+    margin-left: 12px;
+    height: 36px;
+}
+
+.button-color{
+    background-color: rgb(29, 191, 175);
+    color: #fff;
+}
+
+.button-color:hover{
+    background-color:rgb(29, 191, 175, .8);
+}
+th,td{
+    text-align: center;
+}
+
+.mar-30{
+    padding: 0 30px;
+}
+
+.list-percent-point{
+    display: flex;
+    width: 100%;
+}
+
+.percent-point{
+    margin-right: 32px;
+    display: flex;
+}
+
+.title-percent{
+    width:100px;
+}
+
+.other-form{
+    border-top: 2px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 100px;
+
+}
+/* add.html */
+
+.add-form{
+    display: flex;
+    padding-left: 4px;
+    /* align-items: center; */
+}
+
+.add-form .form-group{
+    margin-right: 16px;
+}
+
+.add-form__sub .form-group{
+    width:220px;
+    height:100px;
+}
+
+.add-form__sub{
+    display: flex;
+    margin-right:30px;
+    /* height:100px; */
+    /* align-items: center */
+}
+
+.add-form__sub span{
+    margin-top: 8px;
+    width:80px;
+}
+
+/* validate */
+
+
+.form-group.invalid .form-control {
+    border-color: #f33a58;
+  }
+  
+  .form-group.invalid .form-message {
+    color: #f33a58;
+  }
+  
+  .form-message {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px 0 0;
+  }
+
+  .error-message-selected{
+      font-size: 12px;
+      line-height: 38px;
+      margin-left:32px;
+      color:red;
+  }
