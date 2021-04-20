@@ -75,7 +75,9 @@ public class StudentDAO extends DAO{
                 student.setName(rs.getString("s.MaSV"));
                 
                 tb = tinhTB(p.getCC(), p.getTP1(), p.getTP2(), p.getDT(), ptCC, ptTP1, ptTP2, ptDT);
-                if (p.getCC() != 0 && p.getTP1()!= 0 && p.getTP2()!= 0 ) {         
+                p.setDiemTB(tb);
+                
+                if (p.getCC() != 0 && p.getTP1()!= 0 && p.getTP2()!= 0 && p.getDiemTB() >= 4.0) {         
                     p.setDKDT(1);
                 }
                 else{
@@ -83,7 +85,7 @@ public class StudentDAO extends DAO{
                     p.setDT(a);
                     p.setDKDT(0);
                 }
-                p.setDiemTB(tb);
+                
                 
                 BangDiem bangDiem = new BangDiem(student,Integer.parseInt(student.getId()), p);
                 listBangDiems.add(bangDiem);

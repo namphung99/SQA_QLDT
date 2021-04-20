@@ -75,6 +75,8 @@ public class listClassic extends HttpServlet {
             request.setAttribute("phanTramDiem", phanTramDiem);
             
             sesion.setAttribute("emty", "false");
+            sesion.setAttribute("duDK", 0);
+            sesion.setAttribute("kduDK", 0);
             
 //            StudentDAO studentDAO = new StudentDAO();
 //            List<BangDiem> listBangDiems = new ArrayList<BangDiem>();
