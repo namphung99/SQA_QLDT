@@ -134,7 +134,7 @@ Validator.minLength = (selector, min) =>{
         selector: selector,
         test: function (value) {
             
-            return value.length >= min ? undefined : `Mật khẩu phải lớn hơn ${min} ký tự`;
+            return value.length >= min ? undefined : `Mật khẩu phải có độ dài lớn hơn ${min} ký tự`;
         }
     }
 }
@@ -234,7 +234,7 @@ Validator.checkDecimal = (selector) => {
            let num = parseFloat(value);
            num = ((num - Math.floor(num))*100) % 1;
            console.log(num)
-           return num === 0 ? undefined : "Chỉ phép nhập 2 chữ số sau dấu '.'"
+           return num === 0 ? undefined : "Chỉ cho phép nhập 2 chữ số sau dấu '.'"
             
         }
     }

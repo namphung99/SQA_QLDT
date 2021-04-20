@@ -27,7 +27,7 @@
         <div class="header mar-30">
             <div class="menu" href="/">
                 <img src="assets/image/Logo_PTIT.jpg" alt="" class="navbar-logo">
-                <a href="index.html" class="menu-item">Thông Tin Lớp Giảng Dạy</a>
+                <a href="/" class="menu-item">Thông Tin Lớp Giảng Dạy</a>
             </div>
             <div class="user-info">
                 <span class="user-name">
@@ -79,7 +79,7 @@
                 </div>
 
                 <div class="info-class">
-                    <h6>Thông tin môn học:</h6>
+                    <h5>Thông tin môn học:</h5>
                     <div class="class-name">
                         <span style = "margin-right: 4px;">Tên môn học: </span>
                         <span class = "name-subject">${sessionScope.nameSubject}</span>
@@ -116,7 +116,7 @@
                                         <td colspan = 9 style="text-align:center"></td>
                                     </tr>
                                     <tr>
-                                        <td colspan = 9 style="text-align:center; color:red;"><span>Dữ liệu trống, vui lòng chọn môn học để xem điểm sinh viên!</span></td>
+                                        <td colspan = 9 style="text-align:center; color:red;"><span>Dữ liệu trống, vui lòng chọn môn học và nhóm môn học để xem điểm sinh viên!</span></td>
                                     </tr>
 
                             <% } else { %>

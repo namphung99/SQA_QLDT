@@ -19,7 +19,7 @@
         <div class="header mar-30">
             <div class="menu" href="/">
                 <img src="assets/image/Logo_PTIT.jpg" alt="" class="navbar-logo">
-                <a href="index.html" class="menu-item">Thông Tin Lớp Giảng Dạy</a>
+                <a href="Home.html" class="menu-item">Thông Tin Lớp Giảng Dạy</a>
             </div>
             <div class="user-info">
                 <span class="user-name">
