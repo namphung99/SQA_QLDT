@@ -155,6 +155,7 @@ Validator.checkSpecialCharacters = (selector) =>{
     return {
         selector: selector,
         test: function (value) {
+            var regex = /^[.0-9]+$/;
             var res = undefined;
             var isNum = false;
             if(value.includes('-')){
@@ -175,11 +176,36 @@ Validator.checkSpecialCharacters = (selector) =>{
                     isNum = false;;
                 }
             }
+            if(value.includes('.')){
+                isNum = true;
+                var arr = value.split("");
+                // console.log((parseFloat(value) + 1))
+                if(arr[0] == '.' || arr[value.length - 1] == "."){
+                    regex = /^[0-9]+$/;
+                    isNum = false;
+                }
+                else{
+                    
+                    var count = 0;
+                    for(var i = 0; i < value.length -1; ++i){
+                        if(arr[i] == "."){
+                            count++;
+                        }
+                    }
+                   
+                    if(count > 1){
+                        regex = /^[0-9]+$/; 
+                        isNum = false;
+                    }else{
+                        regex =  /^[.0-9]+$/;
+                        isNum = false;
+                    }
+                }
+            }
             if(isNum === false){
-                var regex = /^[.0-9]+$/;
+
                 res = regex.test(value) ? undefined : 'Điểm không bao gồm chuỗi và các ký tự đặc biệt' ;
             }
-            // var regex = /^[.0-9]+$/;
             return res ;
         }
     }
@@ -206,8 +232,9 @@ Validator.checkDecimal = (selector) => {
         test: function (value) {
            let isDecimal
            let num = parseFloat(value);
-           num = num - Math.floor(num);
-           
+           num = ((num - Math.floor(num))*100) % 1;
+           console.log(num)
+           return num === 0 ? undefined : "Chỉ phép nhập 2 chữ số sau dấu '.'"
             
         }
     }
