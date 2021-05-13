@@ -88,11 +88,64 @@ public class PointDAOTest {
      * Test of editPoint method, of class PointDAO.
      */
     @Test
-    public void testEditPoint() {
+    public void testEditPointSuccess() {
         String idStudent = "1";
         Point point = new Point("1", 10F, 9F, 10F,9F);
         PointDAO instance = new PointDAO();
         boolean expResult =true;
+        boolean result = instance.editPoint(point, idStudent);
+        System.out.println("data is: "+ (result));
+        assertEquals(expResult, result);
+    }
+    @Test
+    public void testEditPointWithEmptyIdStudent() {
+        String idStudent = "";
+        Point point = new Point("1", 10F, 9F, 10F,9F);
+        PointDAO instance = new PointDAO();
+        boolean expResult =false;
+        boolean result = instance.editPoint(point, idStudent);
+        System.out.println("data is: "+ (result));
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testEditPointWithNullIdStudent() {
+        String idStudent = null;
+        Point point = new Point("1", 10F, 9F, 10F,9F);
+        PointDAO instance = new PointDAO();
+        boolean expResult =false;
+        boolean result = instance.editPoint(point, idStudent);
+        System.out.println("data is: "+ (result));
+        assertEquals(expResult, result);
+    }
+    @Test
+    public void testEditPointWithNagetive() {
+        String idStudent = "1000";
+        Point point = new Point("1", 10F, 9F, 10F,9F);
+        PointDAO instance = new PointDAO();
+        boolean expResult =false;
+        boolean result = instance.editPoint(point, idStudent);
+        System.out.println("data is: "+ (result));
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testEditPointWithPointExceeding() {
+        String idStudent = "1";
+        Point point = new Point("1", 100F, 9F, 10F,9F);
+        PointDAO instance = new PointDAO();
+        boolean expResult =false;
+        boolean result = instance.editPoint(point, idStudent);
+        System.out.println("data is: "+ (result));
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testEditPointWithPointNegativeInteger() {
+        String idStudent = "1";
+        Point point = new Point("1", -10F, 9F, 10F,9F);
+        PointDAO instance = new PointDAO();
+        boolean expResult =false;
         boolean result = instance.editPoint(point, idStudent);
         System.out.println("data is: "+ (result));
         assertEquals(expResult, result);
