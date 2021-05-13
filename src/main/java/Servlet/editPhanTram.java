@@ -50,7 +50,7 @@ public class editPhanTram extends HttpServlet {
             phanTramDiem.setPhantramTP2(Float.parseFloat(tp2));
             phanTramDiem.setPhantramDT(Float.parseFloat(dt));
             
-            phanTramDiemDAO.editPhanTramDiem(phanTramDiem);
+//            phanTramDiemDAO.editPhanTramDiem(phanTramDiem);
             
             //request.setAttribute("listToy", list);
 //            String url = request.getContextPath()+"/listtoy";

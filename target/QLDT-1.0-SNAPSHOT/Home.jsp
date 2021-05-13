@@ -25,9 +25,9 @@
     </head>
     <body>
         <div class="header mar-30">
-            <div class="menu" href="/">
+            <div class="menu" href="/SQA_QLDT/listBangDiem">
                 <img src="assets/image/Logo_PTIT.jpg" alt="" class="navbar-logo">
-                <a href="/" class="menu-item">Thông Tin Lớp Giảng Dạy</a>
+                <a href="/SQA_QLDT/listBangDiem" class="menu-item">Thông Tin Lớp Giảng Dạy</a>
             </div>
             <div class="user-info">
                 <span class="user-name">
