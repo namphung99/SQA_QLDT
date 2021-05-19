@@ -5,9 +5,13 @@
  */
 package DAO;
 
+import static DAO.DAO.con;
 import entities.Point;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -52,9 +56,7 @@ public class PointDAO extends DAO {
             ps.setFloat(4, point.getDT());
             ps.setString(5, idStudent);
             return ps.executeUpdate() > 0;
-
-//            ps.executeUpdate();
-        } catch (Exception e) {
+        } catch (Exception e ) {
             e.printStackTrace();
             System.out.println("loi edit");
         }

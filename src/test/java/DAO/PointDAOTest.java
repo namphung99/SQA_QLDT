@@ -6,6 +6,10 @@
 package DAO;
 
 import entities.Point;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.transaction.Transactional;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,9 +22,11 @@ import org.junit.jupiter.api.Assertions;
  *
  * @author BENH VIEN CONG NGHE
  */
-public class PointDAOTest {
+public class PointDAOTest extends DAO{
     
-    public PointDAOTest() {
+    public PointDAOTest() throws SQLException {
+        super();
+        con.setAutoCommit(false);
     }
     
     @BeforeClass
@@ -53,19 +59,17 @@ public class PointDAOTest {
     }
     
     @Test
-    public void testGetPointByIdStudentSuccessWithIdInValid(){
+    public void testGetPointByIdStudentWithIdInValid(){
         String idStudent = "1000";
         
         PointDAO instance = new PointDAO();
-//        Exception exception = Assertions.assertThrows(Exception.class,
-//                () -> instance.getPointByIdStudent(idStudent));
         Point expected = new Point(null, null, null, null, null);
         Point result = instance.getPointByIdStudent(idStudent);
         assertEquals(expected.toString(), result.toString());
     }
     
     @Test
-    public void testGetPointByIdStudentSuccessWithIdNull() {
+    public void testGetPointByIdStudentWithIdNull() {
         String idStudent = null;
         
         PointDAO instance = new PointDAO();
@@ -75,7 +79,7 @@ public class PointDAOTest {
     }
     
     @Test
-    public void testGetPointByIdStudentSuccessWithIdEmpty() {
+    public void testGetPointByIdStudentWithIdEmpty() {
         String idStudent = "";
         
         PointDAO instance = new PointDAO();
@@ -88,9 +92,9 @@ public class PointDAOTest {
      * Test of editPoint method, of class PointDAO.
      */
     @Test
-    public void testEditPointSuccess() {
+    public void testEditPointSuccess(){
         String idStudent = "1";
-        Point point = new Point("1", 10F, 9F, 10F,9F);
+        Point point = new Point("1", (float)10, (float)10, (float)10,(float)9);
         PointDAO instance = new PointDAO();
         boolean expResult =true;
         boolean result = instance.editPoint(point, idStudent);
@@ -98,9 +102,9 @@ public class PointDAOTest {
         assertEquals(expResult, result);
     }
     @Test
-    public void testEditPointWithEmptyIdStudent() {
+    public void testEditPointWithEmptyIdStudent(){
         String idStudent = "";
-        Point point = new Point("1", 10F, 9F, 10F,9F);
+        Point point = new Point("1", (float)10, (float)10,(float) 10,(float)9);
         PointDAO instance = new PointDAO();
         boolean expResult =false;
         boolean result = instance.editPoint(point, idStudent);
@@ -111,7 +115,7 @@ public class PointDAOTest {
     @Test
     public void testEditPointWithNullIdStudent() {
         String idStudent = null;
-        Point point = new Point("1", 10F, 9F, 10F,9F);
+        Point point = new Point("1", (float)10, (float)10, (float)10,(float)9);
         PointDAO instance = new PointDAO();
         boolean expResult =false;
         boolean result = instance.editPoint(point, idStudent);
@@ -119,9 +123,9 @@ public class PointDAOTest {
         assertEquals(expResult, result);
     }
     @Test
-    public void testEditPointWithNagetive() {
+    public void testEditPointWithNagetiveId(){
         String idStudent = "1000";
-        Point point = new Point("1", 10F, 9F, 10F,9F);
+        Point point = new Point("1", (float)10, (float)10, (float)10,(float)9);
         PointDAO instance = new PointDAO();
         boolean expResult =false;
         boolean result = instance.editPoint(point, idStudent);
@@ -130,9 +134,9 @@ public class PointDAOTest {
     }
     
     @Test
-    public void testEditPointWithPointExceeding() {
+    public void testEditPointWithPointExceeding(){
         String idStudent = "1";
-        Point point = new Point("1", 100F, 9F, 10F,9F);
+        Point point = new Point("1", (float)100, (float)9, (float)10,(float)9);
         PointDAO instance = new PointDAO();
         boolean expResult =false;
         boolean result = instance.editPoint(point, idStudent);
@@ -141,14 +145,44 @@ public class PointDAOTest {
     }
     
     @Test
-    public void testEditPointWithPointNegativeInteger() {
-        String idStudent = "1";
-        Point point = new Point("1", -10F, 9F, 10F,9F);
+    public void testEditPointWithPointNegativeInteger(){
+        String idStudent;
+        idStudent = "1";
+        Point point = new Point("1", (float)-10, (float)9, (float)10,(float)9);
         PointDAO instance = new PointDAO();
         boolean expResult =false;
+        boolean result = instance.editPoint(point, idStudent);
+        assertEquals(expResult, result);
+    }
+    @Test
+    public void testEditPointWithPointEquals0(){
+        String idStudent = "1";
+        Point point = new Point("1", (float)10, (float)0, (float)10,(float)9);
+        PointDAO instance = new PointDAO();
+        boolean expResult =true;
         boolean result = instance.editPoint(point, idStudent);
         System.out.println("data is: "+ (result));
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testEditPointWithPointEquals10() {
+        String idStudent = "1";
+        Point point = new Point("1", (float)10, (float)10,(float) 10,(float)9);
+        PointDAO instance = new PointDAO();
+        boolean expResult =true;
+        boolean result = instance.editPoint(point, idStudent);
+        System.out.println("data is: "+ (result));
+        assertEquals(expResult, result);
+    }
+    @Test
+    public void testEditPointWithPointDecimal() {
+        String idStudent = "1";
+        Point point = new Point("1", (float)9.5, (float)10, (float)10,(float)9);
+        PointDAO instance = new PointDAO();
+        boolean expResult =true;
+        boolean result = instance.editPoint(point, idStudent);
+        System.out.println("data is: "+ (result));
+        assertEquals(expResult, result);
+    }
 }

@@ -53,51 +53,39 @@ public class PhanTramDiemDAOTest {
         assertEquals(expResult.toString(), result.toString());
     }
     @Test
-    public void testGetPhanTramDiemByIdSubjectWithInValidId(){
+    public void testGetPhanTramDiemByIdSubjectInValid(){
        
         String idSubject = "abc";
         
         PhanTramDiemDAO instance = new PhanTramDiemDAO();
        
         PhanTramDiem result = instance.getPhanTramDiemByIdSubject(idSubject);
+        PhanTramDiem expResult = new PhanTramDiem(null,null,null,null,null,null);
         System.out.println("data: " + result);
-        String id =result.getId();
-        boolean ex = true, res = false;
-        if(id == null){
-            res = true;
-        }
-        assertEquals(ex, res);
+        assertEquals(expResult.toString(), result.toString());
     }
    
     @Test
-    public void testGetPhanTramDiemByIdSubjecWithNullId(){
+    public void testGetPhanTramDiemByIdSubjecNull(){
        
         String idSubject = null;
         
         PhanTramDiemDAO instance = new PhanTramDiemDAO();
        
         PhanTramDiem result = instance.getPhanTramDiemByIdSubject(idSubject);
-        String id =result.getId();
-        boolean ex = true, res = false;
-        if(id == null){
-            res = true;
-        }
-        assertEquals(ex, res);
+        PhanTramDiem expResult = new PhanTramDiem(null,null,null,null,null,null);
+        assertEquals(expResult.toString(), result.toString());
     }
     @Test
-    public void testGetPhanTramDiemByIdSubjecWithEmptyId() throws NullPointerException{
+    public void testGetPhanTramDiemByIdSubjecEmpty() throws NullPointerException{
        
         String idSubject = "";
         
         PhanTramDiemDAO instance = new PhanTramDiemDAO();
        
         PhanTramDiem result = instance.getPhanTramDiemByIdSubject(idSubject);
-        String id =result.getId();
-        boolean ex = true, res = false;
-        if(id == null){
-            res = true;
-        }
-        assertEquals(ex, res);
+        PhanTramDiem expResult = new PhanTramDiem(null,null,null,null,null,null);
+        assertEquals(expResult.toString(), result.toString());
     }
    
 }
