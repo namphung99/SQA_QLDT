@@ -48,6 +48,11 @@ public class BangDiem implements Serializable{
     public void setPoint(Point point) {
         this.point = point;
     }
+
+    @Override
+    public String toString() {
+        return "BangDiem{" + "student=" + student + ", id=" + id + ", point=" + point + '}';
+    }
     
     
 }

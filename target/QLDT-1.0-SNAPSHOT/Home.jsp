@@ -124,9 +124,9 @@
                                 <tr>
                                     <td style="display:none;">${bd.id}</td>
                                     <td>${loop.index+1}</td>
-         
+                                     <td>${bd.student.getName()}</td>
                                     <td>${bd.student.getMaSV()}</td>
-                                    <td>${bd.student.getName()}</td>
+                   
                                     <td>${bd.point.getCC()}</td>
                                     <td>${bd.point.getTP1()}</td>
                                     <td>${bd.point.getTP2()}</td>

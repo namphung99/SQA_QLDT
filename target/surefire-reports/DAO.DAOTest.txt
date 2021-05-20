@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: DAO.DAOTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.075 sec <<< FAILURE! - in DAO.DAOTest
+testSomeMethod(DAO.DAOTest)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at DAO.DAOTest.testSomeMethod(DAOTest.java:43)
+

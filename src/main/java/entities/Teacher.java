@@ -58,7 +58,10 @@ public class Teacher implements Serializable{
         this.listSubjects = listSubjects;
     }
 
-    
-    
+    @Override
+    public String toString() {
+        return "Teacher{" + "id=" + id + ", idUser=" + idUser + ", name=" + name + ", listSubjects=" + listSubjects + '}';
+    }
+
         
 }

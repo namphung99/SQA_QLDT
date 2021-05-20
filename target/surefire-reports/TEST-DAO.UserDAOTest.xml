@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DAO.UserDAOTest" time="0.437" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DAO.UserDAOTest" time="0.647" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
@@ -64,11 +64,20 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testCheckLoginFail" classname="DAO.UserDAOTest" time="0.393"/>
-  <testcase name="testGetUserByIdSuccess" classname="DAO.UserDAOTest" time="0.001"/>
-  <testcase name="testDeleteUser" classname="DAO.UserDAOTest" time="0"/>
+  <testcase name="testCheckLoginEmptyPassword" classname="DAO.UserDAOTest" time="0.523"/>
+  <testcase name="testCheckLoginWrongPasswordEqualGreatThan6Character" classname="DAO.UserDAOTest" time="0"/>
+  <testcase name="testCheckLoginWrongPassword" classname="DAO.UserDAOTest" time="0.001"/>
+  <testcase name="testDeleteUserSuccess" classname="DAO.UserDAOTest" time="0.037"/>
+  <testcase name="testDeleteUsertestDeleteUserWrongId" classname="DAO.UserDAOTest" time="0.003"/>
+  <testcase name="testGetUserByIdWrongId" classname="DAO.UserDAOTest" time="0.003"/>
+  <testcase name="testGetUserByUsernameWrongDataType" classname="DAO.UserDAOTest" time="0.001"/>
+  <testcase name="testGetUserByIdSuccess" classname="DAO.UserDAOTest" time="0.002"/>
+  <testcase name="testGetUserByIdEmptyId" classname="DAO.UserDAOTest" time="0.01"/>
+  <testcase name="testCheckLoginEmptyUsername" classname="DAO.UserDAOTest" time="0"/>
+  <testcase name="testGetUserByUsernameEmpty" classname="DAO.UserDAOTest" time="0"/>
+  <testcase name="testGetUserByUsernameWrong" classname="DAO.UserDAOTest" time="0.001"/>
   <testcase name="testCheckLoginSuccess" classname="DAO.UserDAOTest" time="0"/>
-  <testcase name="testGetUserByUsernameSuccess" classname="DAO.UserDAOTest" time="0.002"/>
-  <testcase name="testGetUserByUsernameFail" classname="DAO.UserDAOTest" time="0.001"/>
-  <testcase name="testGetUserByIdFail" classname="DAO.UserDAOTest" time="0.001"/>
+  <testcase name="testGetUserByUsernameSuccess" classname="DAO.UserDAOTest" time="0"/>
+  <testcase name="testGetUserByIdWrongDataTypeId" classname="DAO.UserDAOTest" time="0.007"/>
+  <testcase name="testCheckLoginWrongUsername" classname="DAO.UserDAOTest" time="0"/>
 </testsuite>

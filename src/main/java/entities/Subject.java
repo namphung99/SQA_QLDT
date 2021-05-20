@@ -74,6 +74,11 @@ public class Subject implements Serializable{
     public void setPhanTramDiem(PhanTramDiem phanTramDiem) {
         this.phanTramDiem = phanTramDiem;
     }
+
+    @Override
+    public String toString() {
+        return "Subject{" + "id=" + id + ", idTeacher=" + idTeacher + ", name=" + name + ", lisClassics=" + lisClassics + ", phanTramDiem=" + phanTramDiem + '}';
+    }
     
     
 

@@ -7,8 +7,10 @@ package DAO;
 
 import entities.User;
 import java.sql.SQLException;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+//import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+import org.junit.Test;
+//import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
@@ -20,6 +22,7 @@ public class UserDAOTest {
     }
 
     @Test
+    
     public void testCheckLoginSuccess() {
         UserDAO instance = new UserDAO();
         User user = new User("demo", "1234567");

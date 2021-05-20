@@ -74,6 +74,11 @@ public class Student implements Serializable{
     public void setListPoints(ArrayList<Point> listPoints) {
         this.listPoints = listPoints;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" + "id=" + id + ", idUser=" + idUser + ", name=" + name + ", maSV=" + maSV + ", listPoints=" + listPoints + '}';
+    }
     
     
 }
