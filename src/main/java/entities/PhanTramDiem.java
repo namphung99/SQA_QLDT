@@ -75,5 +75,8 @@ public class PhanTramDiem implements Serializable{
         this.phantramDT = phantramDT;
     }
 
-    
+    @Override
+    public String toString() {
+        return "PhanTramDiem{" + "id=" + id + ", IdSubject=" + idSubject + ", phantramCC=" + phantramCC + ", phantramTP1=" + phantramTP1 +", phantramTP2=" + phantramTP2 +", phantramDT=" + phantramDT + '}';
+    }
 }

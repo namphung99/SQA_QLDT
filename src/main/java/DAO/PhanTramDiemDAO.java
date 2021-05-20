@@ -44,22 +44,22 @@ public class PhanTramDiemDAO extends DAO{
         return result;
     }
     
-    public void editPhanTramDiem(PhanTramDiem phanTramDiem) {
-        String sql = "UPDATE phantramdiem SET PhantramCC=?, PhantramTP1=?, PhantramTP2 =?, PhantramDT=? WHERE Id=?";
-        try {
-            PreparedStatement ps = con.prepareStatement(sql);
-            
-//            ps.setString(1, phanTramDiem.getIdSubject());
-            ps.setFloat(1, phanTramDiem.getPhantramCC());
-            ps.setFloat(2, phanTramDiem.getPhantramTP1());
-            ps.setFloat(3, phanTramDiem.getPhantramTP2());
-            ps.setFloat(4, phanTramDiem.getPhantramDT());
-            ps.setString(5, phanTramDiem.getId());
-            
-
-            ps.executeUpdate();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    public void editPhanTramDiem(PhanTramDiem phanTramDiem) {
+//        String sql = "UPDATE phantramdiem SET PhantramCC=?, PhantramTP1=?, PhantramTP2 =?, PhantramDT=? WHERE Id=?";
+//        try {
+//            PreparedStatement ps = con.prepareStatement(sql);
+//            
+////            ps.setString(1, phanTramDiem.getIdSubject());
+//            ps.setFloat(1, phanTramDiem.getPhantramCC());
+//            ps.setFloat(2, phanTramDiem.getPhantramTP1());
+//            ps.setFloat(3, phanTramDiem.getPhantramTP2());
+//            ps.setFloat(4, phanTramDiem.getPhantramDT());
+//            ps.setString(5, phanTramDiem.getId());
+//            
+//
+//            ps.executeUpdate();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

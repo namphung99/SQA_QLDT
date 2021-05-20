@@ -111,4 +111,8 @@ public class Point {
         this.DKDT = DKDT;
     }
    
+    @Override
+    public String toString() {
+        return "Point{" + "id=" + id + ", CC=" + CC +  ",TP1=" + TP1 +",TP2=" + TP2 +", DT=" + DT + '}';
+    }
 }
