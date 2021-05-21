@@ -84,7 +84,7 @@
                         <span style = "margin-right: 4px;">Tên môn học: </span>
                         <span class = "name-subject">${sessionScope.nameSubject}</span>
                     </div>
-                    <div class="school shift">
+                    <div class="school-shift">
                         <span  style = "margin-right: 4px;" >Kíp học: </span>
                         <span>${sessionScope.timeCla} </span>
                     </div>
@@ -121,7 +121,7 @@
 
                             <% } else { %>
                             <c:forEach items="${listBangDiems}" var="bd" varStatus="loop">
-                                <tr>
+                                <tr style="background:#fff ">
                                     <td style="display:none;">${bd.id}</td>
                                     <td>${loop.index+1}</td>
                                      <td>${bd.student.getName()}</td>
@@ -143,6 +143,12 @@
 
                         </tbody>
                     </table>
+                            
+                    <div class="filter-group">
+                        <button class="btn button-color filter-btn">Sinh viên ĐĐKDT</button>
+                        <button class="btn button-color filter-btn">Sinh viên KĐĐKDT</button>
+                        <button class="btn button-color filter-btn">Tất cả SV</button>
+                    </div>
                 </div>
 
                 <div class="row mt-5 other-form">

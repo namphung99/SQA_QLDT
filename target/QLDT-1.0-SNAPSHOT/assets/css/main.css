@@ -182,3 +182,28 @@ th,td{
       margin-left:32px;
       color:red;
   }
+  
+table{
+    border-collapse: collapse;
+    margin-bottom: 8px;
+  }
+
+  th,td{
+      border: 1px solid #ccc;
+  }
+
+.filter-group{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.filter-btn{
+    display: flex;
+    align-items: center;
+    height:26px;
+    text-align:center;
+    line-height:26px;
+    font-size:14px;
+    margin: 0 4px;
+}
