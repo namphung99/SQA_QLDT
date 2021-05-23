@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DAO.SubjectDAOTest" time="0.012" tests="8" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DAO.SubjectDAOTest" time="0.006" tests="8" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
@@ -63,16 +63,16 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testGetSubjectByNameSuccess" classname="DAO.SubjectDAOTest" time="0.001"/>
-  <testcase name="testGetListUserByIdTeacherSuccess" classname="DAO.SubjectDAOTest" time="0.004">
+  <testcase name="testGetSubjectByNameSuccess" classname="DAO.SubjectDAOTest" time="0"/>
+  <testcase name="testGetListUserByIdTeacherSuccess" classname="DAO.SubjectDAOTest" time="0">
     <failure message="expected:&lt;..., idTeacher=1, name=[SQA], lisClassics=null, ...&gt; but was:&lt;..., idTeacher=1, name=[Đảm bảo chất lượng phần mềm], lisClassics=null, ...&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<..., idTeacher=1, name=[SQA], lisClassics=null, ...> but was:<..., idTeacher=1, name=[Đảm bảo chất lượng phần mềm], lisClassics=null, ...>
 	at DAO.SubjectDAOTest.testGetListUserByIdTeacherSuccess(SubjectDAOTest.java:67)
 ]]></failure>
   </testcase>
-  <testcase name="testGetListUserByIdTeacherFail" classname="DAO.SubjectDAOTest" time="0.002"/>
-  <testcase name="testGetListUserByIdTeacherNull" classname="DAO.SubjectDAOTest" time="0.001"/>
+  <testcase name="testGetListUserByIdTeacherFail" classname="DAO.SubjectDAOTest" time="0"/>
+  <testcase name="testGetListUserByIdTeacherNull" classname="DAO.SubjectDAOTest" time="0"/>
   <testcase name="testGetSubjectByNameFail" classname="DAO.SubjectDAOTest" time="0.001"/>
-  <testcase name="testGetSubjectByNameNull" classname="DAO.SubjectDAOTest" time="0.001"/>
+  <testcase name="testGetSubjectByNameNull" classname="DAO.SubjectDAOTest" time="0"/>
   <testcase name="testGetSubjectByNameEmpty" classname="DAO.SubjectDAOTest" time="0.001"/>
-  <testcase name="testGetListUserByIdTeacherEmpty" classname="DAO.SubjectDAOTest" time="0.001"/>
+  <testcase name="testGetListUserByIdTeacherEmpty" classname="DAO.SubjectDAOTest" time="0.003"/>
 </testsuite>

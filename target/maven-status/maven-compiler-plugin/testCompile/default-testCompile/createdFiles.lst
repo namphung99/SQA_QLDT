@@ -1,0 +1,7 @@
+DAO\PhanTramDiemDAOTest.class
+DAO\SubjectDAOTest.class
+DAO\StudentDAOTest.class
+DAO\TeacherDAOTest.class
+DAO\UserDAOTest.class
+DAO\ClassicDAOTest.class
+DAO\PointDAOTest.class

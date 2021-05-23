@@ -26,7 +26,6 @@ public class PointDAOTest extends DAO{
     
     public PointDAOTest() throws SQLException {
         super();
-        con.setAutoCommit(false);
     }
     
     @BeforeClass
@@ -96,10 +95,22 @@ public class PointDAOTest extends DAO{
         String idStudent = "1";
         Point point = new Point("1", (float)10, (float)10, (float)10,(float)9);
         PointDAO instance = new PointDAO();
+        
+        Point initPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("điểm ban đầu: " + initPoint);
+        
         boolean expResult =true;
         boolean result = instance.editPoint(point, idStudent);
-        System.out.println("data is: "+ (result));
+        
+//        check DB thay đổi
+        Point finalPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("DB thay đổi: " + finalPoint);
+        
         assertEquals(expResult, result);
+        //        rollback
+        Point rollbackPoint= new Point("1", (float) initPoint.getCC(), 
+                (float) initPoint.getTP1(), (float) initPoint.getTP2(),(float) initPoint.getDT());
+        instance.editPoint(rollbackPoint, idStudent);
     }
     @Test
     public void testEditPointWithEmptyIdStudent(){
@@ -111,7 +122,7 @@ public class PointDAOTest extends DAO{
         System.out.println("data is: "+ (result));
         assertEquals(expResult, result);
     }
-    
+//    
     @Test
     public void testEditPointWithNullIdStudent() {
         String idStudent = null;
@@ -136,33 +147,72 @@ public class PointDAOTest extends DAO{
     @Test
     public void testEditPointWithPointExceeding(){
         String idStudent = "1";
-        Point point = new Point("1", (float)100, (float)9, (float)10,(float)9);
         PointDAO instance = new PointDAO();
+        
+        Point initPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("điểm ban đầu: " + initPoint);
+        
+        Point point = new Point("1", (float)90, (float)9, (float)10,(float)9);
         boolean expResult =false;
         boolean result = instance.editPoint(point, idStudent);
-        System.out.println("data is: "+ (result));
+        
+        //        check DB thay đổi
+        Point finalPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("DB thay đổi: " + finalPoint);
+        
+        //        rollback
+        Point rollbackPoint= new Point("1", (float) initPoint.getCC(), 
+                (float) initPoint.getTP1(), (float) initPoint.getTP2(),(float) initPoint.getDT());
+        instance.editPoint(rollbackPoint, idStudent);
+        
         assertEquals(expResult, result);
+        
     }
     
     @Test
     public void testEditPointWithPointNegativeInteger(){
         String idStudent;
-        idStudent = "1";
+        idStudent = "1";PointDAO instance = new PointDAO();
+        
+        Point initPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("điểm ban đầu: " + initPoint);
+        
         Point point = new Point("1", (float)-10, (float)9, (float)10,(float)9);
-        PointDAO instance = new PointDAO();
         boolean expResult =false;
         boolean result = instance.editPoint(point, idStudent);
+        
+        //        check DB thay đổi
+        Point finalPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("DB thay đổi: " + finalPoint);
+        
+        //        rollback
+        Point rollbackPoint= new Point("1", (float) initPoint.getCC(), 
+                (float) initPoint.getTP1(), (float) initPoint.getTP2(),(float) initPoint.getDT());
+        instance.editPoint(rollbackPoint, idStudent);
         assertEquals(expResult, result);
+        
     }
     @Test
     public void testEditPointWithPointEquals0(){
         String idStudent = "1";
         Point point = new Point("1", (float)10, (float)0, (float)10,(float)9);
         PointDAO instance = new PointDAO();
+        
+        Point initPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("điểm ban đầu: " + initPoint);
+        
         boolean expResult =true;
         boolean result = instance.editPoint(point, idStudent);
-        System.out.println("data is: "+ (result));
+        
+        //        check DB thay đổi
+        Point finalPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("DB thay đổi: " + finalPoint);
         assertEquals(expResult, result);
+        
+        //        rollback
+        Point rollbackPoint= new Point("1", (float) initPoint.getCC(), 
+                (float) initPoint.getTP1(), (float) initPoint.getTP2(),(float) initPoint.getDT());
+        instance.editPoint(rollbackPoint, idStudent);
     }
     
     @Test
@@ -170,19 +220,43 @@ public class PointDAOTest extends DAO{
         String idStudent = "1";
         Point point = new Point("1", (float)10, (float)10,(float) 10,(float)9);
         PointDAO instance = new PointDAO();
+        
+        Point initPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("điểm ban đầu: " + initPoint);
+        
         boolean expResult =true;
         boolean result = instance.editPoint(point, idStudent);
-        System.out.println("data is: "+ (result));
+        
+        //        check DB thay đổi
+        Point finalPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("DB thay đổi: " + finalPoint);
         assertEquals(expResult, result);
+        
+        //        rollback
+        Point rollbackPoint= new Point("1", (float) initPoint.getCC(), 
+                (float) initPoint.getTP1(), (float) initPoint.getTP2(),(float) initPoint.getDT());
+        instance.editPoint(rollbackPoint, idStudent);
     }
     @Test
     public void testEditPointWithPointDecimal() {
         String idStudent = "1";
         Point point = new Point("1", (float)9.5, (float)10, (float)10,(float)9);
         PointDAO instance = new PointDAO();
+        
+        Point initPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("điểm ban đầu: " + initPoint);
+        
         boolean expResult =true;
         boolean result = instance.editPoint(point, idStudent);
-        System.out.println("data is: "+ (result));
+        
+        //        check DB thay đổi
+        Point finalPoint = instance.getPointByIdStudent(idStudent);
+        System.out.println("DB thay đổi: " + finalPoint);
         assertEquals(expResult, result);
+        
+        //        rollback
+        Point rollbackPoint= new Point("1", (float) initPoint.getCC(), 
+                (float) initPoint.getTP1(), (float) initPoint.getTP2(),(float) initPoint.getDT());
+        instance.editPoint(rollbackPoint, idStudent);
     }
 }

@@ -204,6 +204,18 @@
         <servlet-name>DangXuat</servlet-name>
         <servlet-class>Servlet.DangXuat</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>listBangDiemPass</servlet-name>
+        <servlet-class>Servlet.listBangDiemPass</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>listBangDiemFalse</servlet-name>
+        <servlet-class>Servlet.listBangDiemFalse</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>listBangDiemFull</servlet-name>
+        <servlet-class>Servlet.listBangDiemFull</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Search</servlet-name>
         <url-pattern>/Search</url-pattern>
@@ -407,6 +419,18 @@
     <servlet-mapping>
         <servlet-name>DangXuat</servlet-name>
         <url-pattern>/DangXuat</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>listBangDiemPass</servlet-name>
+        <url-pattern>/listBangDiemPass</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>listBangDiemFalse</servlet-name>
+        <url-pattern>/listBangDiemFalse</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>listBangDiemFull</servlet-name>
+        <url-pattern>/listBangDiemFull</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

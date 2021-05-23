@@ -21,6 +21,30 @@
         <title>QLDT PTIT</title>
         <style>
             .error {border: 1px red solid;}
+            table{
+                border-collapse: collapse;
+                margin-bottom: 8px;
+                }
+
+            th,td{
+            border: 1px solid #ccc;
+            }
+
+            .filter-group{
+            width:100%;
+            display:flex;
+            justify-content:center;
+            }
+
+            .filter-btn{
+            display: flex;
+            align-items: center;
+            height:26px;
+            text-align:center;
+            line-height:26px;
+            font-size:14px;
+            margin: 0 4px;
+            }
         </style>
     </head>
     <body>
@@ -86,7 +110,8 @@
                     </div>
                     <div class="school-shift">
                         <span  style = "margin-right: 4px;" >Kíp học: </span>
-                        <span>${sessionScope.timeCla} </span>
+                        <span class = "name-shift">${sessionScope.timeCla} </span>
+                        <span style="display:none;">${sessionScope.timeClass} </span>
                     </div>
                 </div>
 
@@ -110,8 +135,11 @@
 
                             <%
                                 String se = (String) session.getAttribute("emty");
+                                String fail= (String) session.getAttribute("listFail");
+                                String pass= (String) session.getAttribute("listPass");
+                                
                                 if (se == "false") { %>
-
+                                    
                                     <tr>
                                         <td colspan = 9 style="text-align:center"></td>
                                     </tr>
@@ -119,7 +147,29 @@
                                         <td colspan = 9 style="text-align:center; color:red;"><span>Dữ liệu trống, vui lòng chọn môn học và nhóm môn học để xem điểm sinh viên!</span></td>
                                     </tr>
 
-                            <% } else { %>
+                            <% } 
+                                else if (fail == "false") { %>
+
+                                    <tr>
+                                        <td colspan = 9 style="text-align:center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan = 9 style="text-align:center; color:red;"><span>Không có sinh viên nào không đủ ĐKDT!</span></td>
+                                    </tr>
+
+                            <% } 
+                                 else if (pass == "false") { %>
+
+                                    <tr>
+                                        <td colspan = 9 style="text-align:center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan = 9 style="text-align:center; color:red;"><span>Không có sinh viên nào đủ ĐKDT!</span></td>
+                                    </tr>
+
+                            <% } 
+                                
+                                else { %>
                             <c:forEach items="${listBangDiems}" var="bd" varStatus="loop">
                                 <tr style="background:#fff ">
                                     <td style="display:none;">${bd.id}</td>
@@ -145,9 +195,14 @@
                     </table>
                             
                     <div class="filter-group">
-                        <button class="btn button-color filter-btn">Sinh viên ĐĐKDT</button>
-                        <button class="btn button-color filter-btn">Sinh viên KĐĐKDT</button>
-                        <button class="btn button-color filter-btn">Tất cả SV</button>
+                        <form action="listBangDiemPass" method="POST"> 
+                                <button class="btn button-color filter-btn filter-pass"
+                                        >Sinh viên đủ ĐKDT</button> </form>
+                        <form action="listBangDiemFalse" method="POST"> 
+                            <button class="btn button-color filter-btn filter-fail"
+                                    >Sinh viên không đủ ĐKDT</button> </form>
+                        <form action="listBangDiemFull" method="POST"> 
+                            <button class="btn button-color filter-btn filter-all">Tất cả SV</button> </form>
                     </div>
                 </div>
 
@@ -178,10 +233,10 @@
                     <div class="col-lg-4">
 
                         <div class="d-flex">
-                            <p>Số SV đủ điều kiện dự thi: </p> &nbsp; <p>${sessionScope.kduDK}</p>
+                            <p>Số SV đủ điều kiện dự thi: </p> &nbsp; <p>${sessionScope.duDK}</p>
                         </div>
                         <div class="d-flex">
-                            <p>Số SV không đủ điều kiện dự thi: </p> &nbsp; <p>${sessionScope.duDK}</p>
+                            <p>Số SV không đủ điều kiện dự thi: </p> &nbsp; <p>${sessionScope.kduDK}</p>
                         </div>
                     </div>
                 </div>

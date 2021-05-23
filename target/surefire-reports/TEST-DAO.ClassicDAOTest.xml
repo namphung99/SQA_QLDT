@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DAO.ClassicDAOTest" time="0.678" tests="12" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DAO.ClassicDAOTest" time="0.863" tests="12" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
@@ -63,16 +63,16 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testGetListClassicByIdSubjectSuccessWithIdEmpty" classname="DAO.ClassicDAOTest" time="0.587"/>
+  <testcase name="testGetListClassicByIdSubjectSuccessWithIdEmpty" classname="DAO.ClassicDAOTest" time="0.774"/>
   <testcase name="testGetIDClassByNameSuccessWithIdNullTime" classname="DAO.ClassicDAOTest" time="0.001"/>
   <testcase name="testGetListClassicByIdSubjectSuccessWithIdInValid" classname="DAO.ClassicDAOTest" time="0"/>
-  <testcase name="testGetIDClassByNameSuccessWithIdEmptyTime" classname="DAO.ClassicDAOTest" time="0.002"/>
+  <testcase name="testGetIDClassByNameSuccessWithIdEmptyTime" classname="DAO.ClassicDAOTest" time="0.001"/>
   <testcase name="testGetIDClassByNameSuccessWithIdEmptyIDSub" classname="DAO.ClassicDAOTest" time="0.001"/>
   <testcase name="testGetIDClassByNameSuccessWithIdNullIDSubAndTime" classname="DAO.ClassicDAOTest" time="0.001"/>
   <testcase name="testGetListClassicByIdSubjectSuccess" classname="DAO.ClassicDAOTest" time="0.003"/>
   <testcase name="testGetListClassicByIdSubjectSuccessWithIdNull" classname="DAO.ClassicDAOTest" time="0.001"/>
-  <testcase name="testGetIDClassByNameSuccessWithIdInValid" classname="DAO.ClassicDAOTest" time="0.001"/>
-  <testcase name="testGetIDClassByNameSuccessWithIdNullIDSub" classname="DAO.ClassicDAOTest" time="0.001"/>
+  <testcase name="testGetIDClassByNameSuccessWithIdInValid" classname="DAO.ClassicDAOTest" time="0.002"/>
+  <testcase name="testGetIDClassByNameSuccessWithIdNullIDSub" classname="DAO.ClassicDAOTest" time="0.002"/>
   <testcase name="testGetIDClassByNameSuccessWithIdEmptyIDSubAndTime" classname="DAO.ClassicDAOTest" time="0.001"/>
   <testcase name="testGetIDClassByNameSuccess" classname="DAO.ClassicDAOTest" time="0.001"/>
 </testsuite>

@@ -43,11 +43,14 @@ public class listBangDiem extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession sesion = request.getSession();
+        sesion.setAttribute("emty", "false");
+        sesion.setAttribute("listPass", "true");
+        sesion.setAttribute("listFail", "true");
         String userID = (String) sesion.getAttribute("idUser");
 //        String nameSubject = request.getParameter("nameSub");
         String idSub = (String) sesion.getAttribute("idSubject");
         String timeClass = request.getParameter("timeClass");
-        sesion.setAttribute(timeClass, "timeClass");
+        sesion.setAttribute("timeClass", timeClass);
         
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -74,16 +77,17 @@ public class listBangDiem extends HttpServlet {
             List<BangDiem> listBangDiems = new ArrayList<BangDiem>();
             listBangDiems = studentDAO.getListStudentByIdUser(idClass);
             request.setAttribute("listBangDiems", listBangDiems);
-            sesion.setAttribute("emty", "true");
-            
+            if(listBangDiems.size() > 0){
+                sesion.setAttribute("emty", "true");
+            }
             int countDK = 0, coutKDK = 0;
             
             for (BangDiem listBangDiem : listBangDiems) {
                 if (listBangDiem.getPoint().getDKDT() == 0) {
-                    countDK ++;
+                    coutKDK ++;
                 }
                 else{
-                    coutKDK ++;
+                    countDK ++;
                 }
             }
             sesion.setAttribute("duDK", countDK);

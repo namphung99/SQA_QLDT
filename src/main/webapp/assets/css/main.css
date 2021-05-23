@@ -1,10 +1,10 @@
-/* nav{
+ nav{
     padding: 16px 0 !important;
     position:fixed !important; 
     z-index: 1;
     width: 100%;
     top: 0;
-} */
+} 
 
 .header{
     position:fixed;
@@ -130,12 +130,12 @@ th,td{
     padding-bottom: 100px;
 
 }
-/* add.html */
+ add.html 
 
 .add-form{
     display: flex;
     padding-left: 4px;
-    /* align-items: center; */
+     align-items: center; 
 }
 
 .add-form .form-group{
@@ -150,8 +150,8 @@ th,td{
 .add-form__sub{
     display: flex;
     margin-right:30px;
-    /* height:100px; */
-    /* align-items: center */
+     height:100px; 
+     align-items: center 
 }
 
 .add-form__sub span{
@@ -159,38 +159,38 @@ th,td{
     width:80px;
 }
 
-/* validate */
+ validate 
 
 
 .form-group.invalid .form-control {
     border-color: #f33a58;
-  }
-  
-  .form-group.invalid .form-message {
+}
+
+.form-group.invalid .form-message {
     color: #f33a58;
-  }
-  
-  .form-message {
+}
+
+.form-message {
     font-size: 12px;
     line-height: 16px;
     padding: 4px 0 0;
-  }
+}
 
-  .error-message-selected{
-      font-size: 12px;
-      line-height: 38px;
-      margin-left:32px;
-      color:red;
-  }
-  
-table{
+.error-message-selected{
+    font-size: 12px;
+    line-height: 38px;
+    margin-left:32px;
+    color:red;
+}
+
+/*table{
     border-collapse: collapse;
     margin-bottom: 8px;
-  }
+}
 
-  th,td{
-      border: 1px solid #ccc;
-  }
+th,td{
+    border: 1px solid #ccc;
+}
 
 .filter-group{
     width:100%;
@@ -206,4 +206,4 @@ table{
     line-height:26px;
     font-size:14px;
     margin: 0 4px;
-}
+}*/

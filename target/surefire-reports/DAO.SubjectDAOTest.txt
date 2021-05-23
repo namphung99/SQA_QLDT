@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: DAO.SubjectDAOTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec <<< FAILURE! - in DAO.SubjectDAOTest
-testGetListUserByIdTeacherSuccess(DAO.SubjectDAOTest)  Time elapsed: 0.004 sec  <<< FAILURE!
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec <<< FAILURE! - in DAO.SubjectDAOTest
+testGetListUserByIdTeacherSuccess(DAO.SubjectDAOTest)  Time elapsed: 0 sec  <<< FAILURE!
 org.junit.ComparisonFailure: expected:<..., idTeacher=1, name=[SQA], lisClassics=null, ...> but was:<..., idTeacher=1, name=[??m b?o ch?t l??ng ph?n m?m], lisClassics=null, ...>
 	at DAO.SubjectDAOTest.testGetListUserByIdTeacherSuccess(SubjectDAOTest.java:67)
 
