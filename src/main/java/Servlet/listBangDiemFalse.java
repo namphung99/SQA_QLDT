@@ -16,6 +16,8 @@ import entities.Subject;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -91,6 +93,7 @@ public class listBangDiemFalse extends HttpServlet {
             if(listBangDiemsFalse.size() > 0){
                 sesion.setAttribute("listFail", "true");
             }
+            sapXep(listBangDiemsFalse);
             request.setAttribute("listBangDiems", listBangDiemsFalse);
             sesion.setAttribute("duDK", countDK);
             sesion.setAttribute("kduDK", coutKDK);
@@ -100,6 +103,17 @@ public class listBangDiemFalse extends HttpServlet {
             view.forward(request, response);
     }
     }
+    
+    public void sapXep(List<BangDiem> list) {
+    Collections.sort(list, new Comparator<BangDiem>() {
+        @Override
+        public int compare(BangDiem bd1, BangDiem bd2) {
+            return  bd1.getStudent().getName().compareTo(bd2.getStudent().getName());
+        }
+    });
+    }
+    
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

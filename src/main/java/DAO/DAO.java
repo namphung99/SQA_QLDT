@@ -27,12 +27,12 @@ public class DAO {
     public DAO() {
         if (con == null) {
 //            String dbUrl = "jdbc:mysql://localhost:3306/SQA?autoReconnect=true&useSSL=false";
-                   String dbUrl = "jdbc:mysql://localhost:3306/SQA?autoReconnect=true&useSSL=false";
+                   String dbUrl = "jdbc:mysql://localhost:3306/sqa?autoReconnect=true&useSSL=false";
 		String dbClass = "com.mysql.cj.jdbc.Driver";
 
             try {
                 Class.forName(dbClass);
-                con = DriverManager.getConnection(dbUrl, "root", "1234");
+                con = DriverManager.getConnection(dbUrl, "root", "10101999");
             } catch (Exception e) {
                 e.printStackTrace();
             }
