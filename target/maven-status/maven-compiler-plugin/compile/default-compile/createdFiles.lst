@@ -17,7 +17,6 @@ entities\PhanTramDiem.class
 DAO\StudentDAO.class
 Servlet\EditPointStudent.class
 DAO\PhanTramDiemDAO.class
-DAO\TeacherDAO.class
 Servlet\EditpointSuccess.class
 Servlet\listBangDiem.class
 DAO\DAO.class

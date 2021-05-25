@@ -232,10 +232,11 @@ Validator.checkDecimal = (selector) => {
         test: function (value) {
            let isDecimal
            let num = parseFloat(value);
-           num = ((num - Math.floor(num))*100) % 1;
-           console.log(num)
-           return num === 0 ? undefined : "Chỉ cho phép nhập 2 chữ số sau dấu '.'"
-            
+           let num2 = Math.floor(num)
+           isDecimal = (num - num2).toFixed(3);
+           let res = (isDecimal*100) % 1;
+           consle.log(res)
+           return res  == 0 ? undefined : "Chỉ phép nhập 2 chữ số sau dấu '.'"
         }
     }
 }

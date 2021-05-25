@@ -130,12 +130,12 @@ th,td{
     padding-bottom: 100px;
 
 }
- add.html 
+ /*add.html*/ 
 
 .add-form{
     display: flex;
     padding-left: 4px;
-     align-items: center; 
+    align-items: center; 
 }
 
 .add-form .form-group{
@@ -150,8 +150,8 @@ th,td{
 .add-form__sub{
     display: flex;
     margin-right:30px;
-     height:100px; 
-     align-items: center 
+    height:100px; 
+    align-items: center 
 }
 
 .add-form__sub span{
@@ -159,7 +159,7 @@ th,td{
     width:80px;
 }
 
- validate 
+ /*validate*/ 
 
 
 .form-group.invalid .form-control {
@@ -183,27 +183,3 @@ th,td{
     color:red;
 }
 
-/*table{
-    border-collapse: collapse;
-    margin-bottom: 8px;
-}
-
-th,td{
-    border: 1px solid #ccc;
-}
-
-.filter-group{
-    width:100%;
-    display:flex;
-    justify-content:center;
-}
-
-.filter-btn{
-    display: flex;
-    align-items: center;
-    height:26px;
-    text-align:center;
-    line-height:26px;
-    font-size:14px;
-    margin: 0 4px;
-}*/

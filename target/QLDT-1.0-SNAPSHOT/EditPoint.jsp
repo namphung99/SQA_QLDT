@@ -52,32 +52,44 @@
                 <div class="row mt-4">
 
                     <div class="upadte">
-                        <form class="add-form" id = "form-2" method="POST" action="EditPointStudent">
+                        <form class="add-form" id = "form-2" method="POST" action="EditPointStudent"
+                            style ="display: flex; padding-left: 4px; align-items: center; "
+                        >
                             <label name="id" style="display:none;"> ${sessionScope.nameUser}</label>
-                            <div class="add-form__sub">
+                            <div class="add-form__sub" 
+                                 style="display: flex;margin-right:30px;height:100px;align-items: baseline ">
                                 <input type="text" class="form-control" value = "${pointUpdate.id}" name ="id" style="display:none;" >
-                                <span>Điểm CC</span>
+                                <span style="margin-top: 8px;width:80px;">
+                                    Điểm CC</span>
                                 <div class="form-group">
                                     <input type="text" class="form-control" value = "${pointUpdate.CC}" name ="cc" id = "diem-cc" autofocus>
                                     <span class="form-message"></span>
                                 </div>
                             </div>
-                            <div class="add-form__sub">
-                                <span>Điểm TP1</span>
+                            <div class="add-form__sub" 
+                                 style="display: flex;margin-right:30px;height:100px;align-items: baseline ">
+                                <span style="margin-top: 8px;width:80px;">
+                                    Điểm TP1</span>
                                 <div class="form-group">
                                     <input type="text" class="form-control" value = "${pointUpdate.TP1}" name ="tp1" id = "diem-tp1">
                                     <span class="form-message"></span>
                                 </div>
                             </div>
-                            <div class="add-form__sub">
-                                <span>Điểm TP2</span>
+                            <div class="add-form__sub" 
+                                 style="display: flex;margin-right:30px;height:100px;align-items: baseline ">
+                                <span style="margin-top: 8px;width:80px;">
+                                    Điểm TP2</span>
+                                <div class="form-group">
                                 <div class="form-group">
                                     <input type="text" class="form-control" value = "${pointUpdate.TP2}" name ="tp2" id = "diem-tp2">
                                     <span class="form-message"></span>
                                 </div>
                             </div>
-                            <div class="add-form__sub">
-                                <span>Điểm Thi</span>
+                            <div class="add-form__sub" 
+                                 style="display: flex;margin-right:30px;height:100px;align-items: baseline ">
+                                <span style="margin-top: 8px;width:80px;">
+                                    Điểm Thi</span>
+                                <div class="form-group">
                                 <div class="form-group">
                                     <input type="text" class="form-control" value = "${pointUpdate.DT}" name ="thi" id = "diem-thi">
                                     <span class="form-message"></span>
