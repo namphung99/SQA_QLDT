@@ -75,7 +75,7 @@ public class StudentDAO extends DAO{
                 student.setName(rs.getString("s.Name"));
                 
                 tb = tinhTB(p.getCC(), p.getTP1(), p.getTP2(), p.getDT(), ptCC, ptTP1, ptTP2, ptDT);
-                p.setDiemTB(tb);
+                p.setDiemTB((float) Math.round(tb * 100) / 100);
                 
                 if (p.getCC() != 0 && p.getTP1()!= 0 && p.getTP2()!= 0 && p.getDiemTB() >= 4.0) {         
                     p.setDKDT(1);

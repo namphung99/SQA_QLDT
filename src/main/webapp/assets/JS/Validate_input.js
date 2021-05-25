@@ -7,7 +7,7 @@ function Validator(options) {
 
 
     // Hàm thực hiện validate
-    function validate(inputElement,rule) {
+    function validate(inputElement, rule) {
         // console.log(options.errorSelector)
         var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
         // var errorMessage =rule.test(inputElement.value);
@@ -20,30 +20,30 @@ function Validator(options) {
         // neu co loi thi dung kiem tra
         for (let i = 0; i < rules.length; i++) {
             errorMessage = rules[i](inputElement.value);
-            if(errorMessage) break;
+            if (errorMessage)
+                break;
         }
 
-        if(errorMessage){
-             errorElement.innerHTML = errorMessage;
-             inputElement.parentElement.classList.add('invalid');
+        if (errorMessage) {
+            errorElement.innerHTML = errorMessage;
+            inputElement.parentElement.classList.add('invalid');
+        } else {
+            errorElement.innerHTML = '';
+            inputElement.parentElement.classList.remove('invalid');
+
         }
-        else{
-             errorElement.innerHTML = '';
-             inputElement.parentElement.classList.remove('invalid');
-    
-        }
-    
+
         return !errorMessage; // có lỗi return false
     }
 
     // lấy element form validate
     var formElement = document.querySelector(options.form);
-    if(formElement){
+    if (formElement) {
         // lặp qua các rules
         options.rules.forEach(rule => {
 
             // luu lai rule cho moi input
-            
+
             if (Array.isArray(selectorRules[rule.selector])) {
                 selectorRules[rule.selector].push(rule.test);
             } else {
@@ -51,46 +51,45 @@ function Validator(options) {
             }
 
             var inputElement = formElement.querySelector(rule.selector);
-            if(inputElement){
+            if (inputElement) {
 
                 // on blur
                 inputElement.onblur = () => {
-                   validate(inputElement,rule)
+                    validate(inputElement, rule)
                 }
 
                 // nhập input
                 inputElement.oninput = () => {
                     var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
                     errorElement.innerHTML = '';
-                    inputElement.parentElement.classList.remove('invalid'); 
+                    inputElement.parentElement.classList.remove('invalid');
                 }
             }
         });
         // console.log(selectorRules)
 
         //submit
-        formElement.onsubmit = (e) =>{
+        formElement.onsubmit = (e) => {
             e.preventDefault();
 
             var isFormValid = true;
             options.rules.forEach(rule => {
                 var inputElement = formElement.querySelector(rule.selector);
-                var isValid = validate(inputElement,rule);
-                if(!isValid){
+                var isValid = validate(inputElement, rule);
+                if (!isValid) {
                     isFormValid = false;
                 }
             })
             // submit js
-            if(isFormValid){
-                if(typeof options.onSubmit === 'function') {
+            if (isFormValid) {
+                if (typeof options.onSubmit === 'function') {
 
                     var Inputs = formElement.querySelectorAll('[name]');
-                    var formValues = Array.from(Inputs).reduce((values,input) =>{
+                    var formValues = Array.from(Inputs).reduce((values, input) => {
                         return (values[input.name] = input.value) && values
-                    },{});
+                    }, {});
                     options.onSubmit(formValues);
-                }
-                else{
+                } else {
                     formElement.submit();
                 }
             }
@@ -109,7 +108,7 @@ function Validator(options) {
 
 // validate Login
 
-Validator.isRequiredLogin = function (selector,message) {
+Validator.isRequiredLogin = function (selector, message) {
     return {
         selector: selector,
         test: function (value) {
@@ -118,22 +117,22 @@ Validator.isRequiredLogin = function (selector,message) {
     }
 }
 
-Validator.isUser = (selector) =>{
+Validator.isUser = (selector) => {
     return {
         selector: selector,
         test: function (value) {
             // var regex = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
             var regex = /^[a-zA-Z0-9]+$/;
-            return regex.test(value) ? undefined : 'MGV không bao gồm các ký tự đặc biệt!' ;
+            return regex.test(value) ? undefined : 'MGV không bao gồm các ký tự đặc biệt!';
         }
     }
 }
 
-Validator.minLength = (selector, min) =>{
+Validator.minLength = (selector, min) => {
     return {
         selector: selector,
         test: function (value) {
-            
+
             return value.length >= min ? undefined : `Mật khẩu phải có độ dài lớn hơn ${min} ký tự`;
         }
     }
@@ -142,7 +141,7 @@ Validator.minLength = (selector, min) =>{
 
 // validate nhap phan tram diem
 
-Validator.isRequiredPoint = function (selector,message) {
+Validator.isRequiredPoint = function (selector, message) {
     return {
         selector: selector,
         test: function (value) {
@@ -151,77 +150,76 @@ Validator.isRequiredPoint = function (selector,message) {
     }
 }
 
-Validator.checkSpecialCharacters = (selector) =>{
+Validator.checkSpecialCharacters = (selector) => {
     return {
         selector: selector,
         test: function (value) {
             var regex = /^[.0-9]+$/;
             var res = undefined;
             var isNum = false;
-            if(value.includes('-')){
+            if (value.includes('-')) {
                 isNum = true;
                 var arr = value.split("");
-                if(arr[0] == '-'){
-                    arr.splice(0,1);
+                if (arr[0] == '-') {
+                    arr.splice(0, 1);
                     arr = arr.join("");
                     let re = /^[.0-9]+$/;
                     let isSpecialChar = arr.match(re) ? false : true;
-                    if(isSpecialChar == true){
+                    if (isSpecialChar == true) {
                         isNum = false;
-                    }else{
+                    } else {
                         isNum = true;
                     }
-                }
-                else{
-                    isNum = false;;
+                } else {
+                    isNum = false;
+                    ;
                 }
             }
-            if(value.includes('.')){
+            if (value.includes('.')) {
                 isNum = true;
                 var arr = value.split("");
                 // console.log((parseFloat(value) + 1))
-                if(arr[0] == '.' || arr[value.length - 1] == "."){
+                if (arr[0] == '.' || arr[value.length - 1] == ".") {
                     regex = /^[0-9]+$/;
                     isNum = false;
-                }
-                else{
-                    
+                } else {
+
                     var count = 0;
-                    for(var i = 0; i < value.length -1; ++i){
-                        if(arr[i] == "."){
+                    for (var i = 0; i < value.length - 1; ++i) {
+                        if (arr[i] == ".") {
                             count++;
                         }
                     }
-                   
-                    if(count > 1){
-                        regex = /^[0-9]+$/; 
+
+                    if (count > 1) {
+                        regex = /^[0-9]+$/;
                         isNum = false;
-                    }else{
-                        regex =  /^[.0-9]+$/;
+                    } else {
+                        regex = /^[.0-9]+$/;
                         isNum = false;
                     }
                 }
             }
-            if(isNum === false){
+            if (isNum === false) {
 
-                res = regex.test(value) ? undefined : 'Điểm không bao gồm chuỗi và các ký tự đặc biệt' ;
+                res = regex.test(value) ? undefined : 'Điểm không bao gồm chuỗi và các ký tự đặc biệt';
             }
-            return res ;
+            return res;
         }
     }
 }
 
-Validator.checkNum = (selector) =>{
+Validator.checkNum = (selector) => {
     return {
         selector: selector,
         test: function (value) {
-           let num = parseFloat(value);
+            let num = parseFloat(value);
             let isOK = false;
-            if(num >=0 && num <=10){
-                
+            if (num >= 0 && num <= 10) {
+
                 isOK = true;
             }
-            return isOK ? undefined : 'Giá trị điểm cho phép từ 0 - 10' ;
+            return isOK ? undefined : 'Giá trị điểm cho phép từ 0 - 10';
         }
     }
 }
@@ -230,12 +228,12 @@ Validator.checkDecimal = (selector) => {
     return {
         selector: selector,
         test: function (value) {
-           let isDecimal
-           let num = parseFloat(value);
-           let num2 = Math.floor(num)
-           isDecimal = (num - num2).toFixed(3);
-           let res = (isDecimal*100) % 1;
-           return res  == 0 ? undefined : "Chỉ phép nhập 2 chữ số sau dấu '.'"
+            let isDecimal
+            let num = parseFloat(value);
+            let num2 = Math.floor(num);
+            isDecimal = (num - num2).toFixed(3);
+            let res = ((isDecimal * 100).toFixed(3)) % 1;
+            return res == 0 ? undefined : "Chỉ phép nhập 2 chữ số sau dấu '.'"
         }
     }
 }

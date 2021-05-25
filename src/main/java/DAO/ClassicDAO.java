@@ -53,6 +53,7 @@ public class ClassicDAO extends DAO{
             while (rs.next()) {
                 Classic classic = new Classic();
                 classic.setId(rs.getString("Id"));
+                classic.setIdSubject(idSubject);
                 classic.setName(rs.getString("Name"));
                 classic.setTime(rs.getString("Time"));
                 result.add(classic);

@@ -67,6 +67,11 @@ public class Classic implements Serializable{
         this.listPoint = listPoint;
     }
 
+    @Override
+    public String toString() {
+        return "Classic{" + "id=" + id + ", idSubject=" + idSubject + ", name=" + name + ", time=" + time + ", listPoint=" + listPoint + '}';
+    }
+
     
     
 }

@@ -166,32 +166,13 @@ public class ClassicDAOTest {
     public void testGetListClassicByIdSubjectSuccess() {
         String idSubject = "1";
         ClassicDAO instance = new ClassicDAO();
-        ArrayList<Classic> expResultArray = new ArrayList<Classic>();
+        ArrayList<Classic> expResult = new ArrayList<Classic>();
         Classic c1 = new Classic("1", "1", "INT-01", "D17_SQA01", null);
         Classic c2 = new Classic("2", "1", "INT-02", "D17_SQA02", null);
-        expResultArray.add(c1);
-        expResultArray.add(c2);
-        
-        ArrayList<Classic> resultArray = instance.getListClassicByIdSubject(idSubject);
-        
-        int sizeEx = expResultArray.size();
-        int sizeRe = resultArray.size();
-        
-        boolean expResult = true;
-        boolean result = false;
-        int sum = 0;
-        
-        if (sizeEx == sizeRe) {
-            for (int i = 0; i < sizeEx; i++) {
-                if (expResultArray.get(i).getId().equals(resultArray.get(i).getId())) {
-                    sum++;
-                }
-            }
-            if (sum == sizeEx) {
-                result = true;
-            }
-        }
-        assertEquals(expResult, result);
+        expResult.add(c1);
+        expResult.add(c2);
+        ArrayList<Classic> result = instance.getListClassicByIdSubject(idSubject);
+        assertEquals(expResult.toString(), result.toString());
     }
     
     /**
@@ -201,27 +182,9 @@ public class ClassicDAOTest {
     public void testGetListClassicByIdSubjectSuccessWithIdInValid() {
         String idSubject = "1000";
         ClassicDAO instance = new ClassicDAO();
-        ArrayList<Classic> expResultArray = new ArrayList<Classic>();
-        ArrayList<Classic> resultArray = instance.getListClassicByIdSubject(idSubject);
-        
-        int sizeEx = expResultArray.size();
-        int sizeRe = resultArray.size();
-        
-        boolean expResult = true;
-        boolean result = false;
-        int sum = 0;
-        
-        if (sizeEx == sizeRe) {
-            for (int i = 0; i < sizeEx; i++) {
-                if (expResultArray.get(i).getId().equals(resultArray.get(i).getId())) {
-                    sum++;
-                }
-            }
-            if (sum == sizeEx) {
-                result = true;
-            }
-        }
-        assertEquals(expResult, result);
+        ArrayList<Classic> expResult = new ArrayList<Classic>();
+        ArrayList<Classic> result = instance.getListClassicByIdSubject(idSubject);
+        assertEquals(expResult.toString(), result.toString());
     }
     
     
@@ -232,28 +195,9 @@ public class ClassicDAOTest {
     public void testGetListClassicByIdSubjectSuccessWithIdNull() {
         String idSubject = null;
         ClassicDAO instance = new ClassicDAO();
-        ArrayList<Classic> expResultArray = new ArrayList<Classic>();        
-        ArrayList<Classic> resultArray = instance.getListClassicByIdSubject(idSubject);
-        
-        int sizeEx = expResultArray.size();
-        int sizeRe = resultArray.size();
-        
-        boolean expResult = true;
-        boolean result = false;
-        int sum = 0;
-        
-        if (sizeEx == sizeRe) {
-            for (int i = 0; i < sizeEx; i++) {
-                if (expResultArray.get(i).getId().equals(resultArray.get(i).getId())) {
-                    sum++;
-                }
-            }
-            if (sum == sizeEx) {
-                result = true;
-            }
-        }
-        
-        assertEquals(expResult, result);
+        ArrayList<Classic> expResult = new ArrayList<Classic>();        
+        ArrayList<Classic> result = instance.getListClassicByIdSubject(idSubject);
+        assertEquals(expResult.toString(), result.toString());
     }
     
     /**
@@ -263,28 +207,9 @@ public class ClassicDAOTest {
     public void testGetListClassicByIdSubjectSuccessWithIdEmpty() {
         String idSubject = "";
         ClassicDAO instance = new ClassicDAO();
-        ArrayList<Classic> expResultArray = new ArrayList<Classic>();
-        ArrayList<Classic> resultArray = instance.getListClassicByIdSubject(idSubject);
-        
-        int sizeEx = expResultArray.size();
-        int sizeRe = resultArray.size();
-        
-        boolean expResult = true;
-        boolean result = false;
-        int sum = 0;
-        
-        if (sizeEx == sizeRe) {
-            for (int i = 0; i < sizeEx; i++) {
-                if (expResultArray.get(i).getId().equals(resultArray.get(i).getId())) {
-                    sum++;
-                }
-            }
-            if (sum == sizeEx) {
-                result = true;
-            }
-        }
-        
-        assertEquals(expResult, result);
+        ArrayList<Classic> expResult = new ArrayList<Classic>();
+        ArrayList<Classic> result = instance.getListClassicByIdSubject(idSubject);
+        assertEquals(expResult.toString(), result.toString());
     }
     
 //    @Test
