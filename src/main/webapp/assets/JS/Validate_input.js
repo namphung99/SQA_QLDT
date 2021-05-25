@@ -235,7 +235,6 @@ Validator.checkDecimal = (selector) => {
            let num2 = Math.floor(num)
            isDecimal = (num - num2).toFixed(3);
            let res = (isDecimal*100) % 1;
-           consle.log(res)
            return res  == 0 ? undefined : "Chỉ phép nhập 2 chữ số sau dấu '.'"
         }
     }

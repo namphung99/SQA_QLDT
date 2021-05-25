@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DAO.StudentDAOTest" time="0.01" tests="10" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DAO.StudentDAOTest" time="0.009" tests="10" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
@@ -66,16 +66,16 @@
   </properties>
   <testcase name="testGetListStudentByIdUserFail" classname="DAO.StudentDAOTest" time="0"/>
   <testcase name="testGetListStudentByIdUserNull" classname="DAO.StudentDAOTest" time="0"/>
-  <testcase name="testGetStudentByUserIDEmpTy" classname="DAO.StudentDAOTest" time="0.001"/>
+  <testcase name="testGetStudentByUserIDEmpTy" classname="DAO.StudentDAOTest" time="0"/>
   <testcase name="testGetStudentByUserIDSuccess" classname="DAO.StudentDAOTest" time="0"/>
   <testcase name="testTinhTBFail" classname="DAO.StudentDAOTest" time="0"/>
-  <testcase name="testGetListStudentByIdUserSuccess" classname="DAO.StudentDAOTest" time="0.008">
+  <testcase name="testGetListStudentByIdUserSuccess" classname="DAO.StudentDAOTest" time="0.005">
     <failure message="expected:&lt;...oint=Point{id=1, CC=[10].0,TP1=10.0,TP2=10.0...&gt; but was:&lt;...oint=Point{id=1, CC=[9].0,TP1=10.0,TP2=10.0...&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<...oint=Point{id=1, CC=[10].0,TP1=10.0,TP2=10.0...> but was:<...oint=Point{id=1, CC=[9].0,TP1=10.0,TP2=10.0...>
 	at DAO.StudentDAOTest.testGetListStudentByIdUserSuccess(StudentDAOTest.java:96)
 ]]></failure>
   </testcase>
   <testcase name="testTinhTBSuccess" classname="DAO.StudentDAOTest" time="0"/>
-  <testcase name="testGetListStudentByIdUserEmpty" classname="DAO.StudentDAOTest" time="0"/>
-  <testcase name="testGetStudentByUserIDFail" classname="DAO.StudentDAOTest" time="0"/>
-  <testcase name="testGetStudentByUserIDNull" classname="DAO.StudentDAOTest" time="0"/>
+  <testcase name="testGetListStudentByIdUserEmpty" classname="DAO.StudentDAOTest" time="0.001"/>
+  <testcase name="testGetStudentByUserIDFail" classname="DAO.StudentDAOTest" time="0.001"/>
+  <testcase name="testGetStudentByUserIDNull" classname="DAO.StudentDAOTest" time="0.001"/>
 </testsuite>

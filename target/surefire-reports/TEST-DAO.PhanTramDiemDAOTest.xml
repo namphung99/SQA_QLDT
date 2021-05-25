@@ -65,7 +65,7 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase name="testGetPhanTramDiemByIdSubjecEmpty" classname="DAO.PhanTramDiemDAOTest" time="0"/>
-  <testcase name="testGetPhanTramDiemByIdSubjectInValid" classname="DAO.PhanTramDiemDAOTest" time="0.001"/>
+  <testcase name="testGetPhanTramDiemByIdSubjectInValid" classname="DAO.PhanTramDiemDAOTest" time="0"/>
   <testcase name="testGetPhanTramDiemByIdSubjecNull" classname="DAO.PhanTramDiemDAOTest" time="0"/>
-  <testcase name="testGetPhanTramDiemByIdSubjectSuccess" classname="DAO.PhanTramDiemDAOTest" time="0"/>
+  <testcase name="testGetPhanTramDiemByIdSubjectSuccess" classname="DAO.PhanTramDiemDAOTest" time="0.001"/>
 </testsuite>

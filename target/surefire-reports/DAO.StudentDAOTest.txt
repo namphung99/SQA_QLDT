@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: DAO.StudentDAOTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec <<< FAILURE! - in DAO.StudentDAOTest
-testGetListStudentByIdUserSuccess(DAO.StudentDAOTest)  Time elapsed: 0.008 sec  <<< FAILURE!
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec <<< FAILURE! - in DAO.StudentDAOTest
+testGetListStudentByIdUserSuccess(DAO.StudentDAOTest)  Time elapsed: 0.005 sec  <<< FAILURE!
 org.junit.ComparisonFailure: expected:<...oint=Point{id=1, CC=[10].0,TP1=10.0,TP2=10.0...> but was:<...oint=Point{id=1, CC=[9].0,TP1=10.0,TP2=10.0...>
 	at DAO.StudentDAOTest.testGetListStudentByIdUserSuccess(StudentDAOTest.java:96)
 

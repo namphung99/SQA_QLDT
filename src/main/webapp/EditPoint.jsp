@@ -102,7 +102,7 @@
 
                 </div>
             </div>
-            <script src="assets/JS/Validate_input.js"></script>
+            <script src="assets/JS/Validate_Input.js"></script>
 
             <script>
 

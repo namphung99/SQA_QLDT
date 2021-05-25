@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DAO.PointDAOTest" time="0.107" tests="13" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DAO.PointDAOTest" time="0.111" tests="13" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
@@ -66,7 +66,7 @@
   </properties>
   <testcase name="testEditPointWithEmptyIdStudent" classname="DAO.PointDAOTest" time="0"/>
   <testcase name="testGetPointByIdStudentWithIdNull" classname="DAO.PointDAOTest" time="0"/>
-  <testcase name="testEditPointWithPointNegativeInteger" classname="DAO.PointDAOTest" time="0.044">
+  <testcase name="testEditPointWithPointNegativeInteger" classname="DAO.PointDAOTest" time="0.041">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<false> but was:<true>
 	at DAO.PointDAOTest.testEditPointWithPointNegativeInteger(PointDAOTest.java:192)
 ]]></failure>
@@ -74,7 +74,7 @@
 DB thay ??i: Point{id=1, CC=-10.0,TP1=9.0,TP2=10.0, DT=9.0}
 ]]></system-out>
   </testcase>
-  <testcase name="testEditPointWithPointExceeding" classname="DAO.PointDAOTest" time="0.015">
+  <testcase name="testEditPointWithPointExceeding" classname="DAO.PointDAOTest" time="0.02">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<false> but was:<true>
 	at DAO.PointDAOTest.testEditPointWithPointExceeding(PointDAOTest.java:168)
 ]]></failure>
@@ -82,13 +82,13 @@ DB thay ??i: Point{id=1, CC=-10.0,TP1=9.0,TP2=10.0, DT=9.0}
 DB thay ??i: Point{id=1, CC=90.0,TP1=9.0,TP2=10.0, DT=9.0}
 ]]></system-out>
   </testcase>
-  <testcase name="testEditPointWithNagetiveId" classname="DAO.PointDAOTest" time="0.001"/>
-  <testcase name="testEditPointWithPointDecimal" classname="DAO.PointDAOTest" time="0.018"/>
+  <testcase name="testEditPointWithNagetiveId" classname="DAO.PointDAOTest" time="0"/>
+  <testcase name="testEditPointWithPointDecimal" classname="DAO.PointDAOTest" time="0.021"/>
   <testcase name="testGetPointByIdStudentWithIdEmpty" classname="DAO.PointDAOTest" time="0"/>
   <testcase name="testEditPointWithNullIdStudent" classname="DAO.PointDAOTest" time="0"/>
   <testcase name="testGetPointByIdStudentWithIdInValid" classname="DAO.PointDAOTest" time="0"/>
-  <testcase name="testEditPointWithPointEquals0" classname="DAO.PointDAOTest" time="0.017"/>
-  <testcase name="testGetPointByIdStudentSuccess" classname="DAO.PointDAOTest" time="0.002"/>
-  <testcase name="testEditPointSuccess" classname="DAO.PointDAOTest" time="0.008"/>
-  <testcase name="testEditPointWithPointEquals10" classname="DAO.PointDAOTest" time="0.002"/>
+  <testcase name="testEditPointWithPointEquals0" classname="DAO.PointDAOTest" time="0.011"/>
+  <testcase name="testGetPointByIdStudentSuccess" classname="DAO.PointDAOTest" time="0.003"/>
+  <testcase name="testEditPointSuccess" classname="DAO.PointDAOTest" time="0.003"/>
+  <testcase name="testEditPointWithPointEquals10" classname="DAO.PointDAOTest" time="0.012"/>
 </testsuite>
