@@ -44,14 +44,16 @@ public class SubjectDAOTest {
         assertNull(expect);
         
     }
+    // sửa hàm này
     @Test
     public void testGetSubjectByNameFail() {
         SubjectDAO instance = new SubjectDAO();
-        String key ="English";
+        String key ="Đại số";
         
         Subject expect = instance.getSubjectByName(key);
         Subject subject = new Subject("1","1","English");
-        assertNotEquals(expect.toString(),subject.toString());     
+       // assertNotEquals(expect.toString(),subject.toString());     cũ
+       assertNull(expect);
     }
 
     @Test
@@ -66,17 +68,25 @@ public class SubjectDAOTest {
         actuals.add(sub2);
         assertEquals(expecteds.toString(), actuals.toString());    
     }
+    //su fail nay
     @Test
     public void testGetListUserByIdTeacherFail(){
         SubjectDAO instance = new SubjectDAO();
-        String key ="1";
+        String key ="100";
         ArrayList<Subject> expecteds = instance.getListUserByIdTeacher(key);
         ArrayList<Subject> actuals = new ArrayList<>();
         Subject sub1 = new Subject("2","1","Đảm bảo chất lượng phần mềm");
         actuals.add(sub1);
         Subject sub2 = new Subject("1","1","English");
         actuals.add(sub2);
-        assertNotEquals(expecteds.toString(), actuals.toString());    
+        // them doan này
+         boolean sizearray =true;
+        if(expecteds.size()==0)
+        {
+            sizearray=false;
+        }
+     
+        assertFalse(sizearray);    
     }
      @Test
     public void testGetListUserByIdTeacherEmpty(){

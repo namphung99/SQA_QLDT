@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: DAO.ClassicDAOTest
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.438 sec - in DAO.ClassicDAOTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.439 sec - in DAO.ClassicDAOTest
