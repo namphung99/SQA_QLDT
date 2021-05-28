@@ -69,7 +69,7 @@ CREATE TABLE `phantramdiem` (
 
 LOCK TABLES `phantramdiem` WRITE;
 /*!40000 ALTER TABLE `phantramdiem` DISABLE KEYS */;
-INSERT INTO `phantramdiem` VALUES ('1','1',10,20,0,50),('2','2',10,20,20,50);
+INSERT INTO `phantramdiem` VALUES ('1','1',10,10,10,70),('2','2',10,20,20,50);
 /*!40000 ALTER TABLE `phantramdiem` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -102,7 +102,7 @@ CREATE TABLE `point` (
 
 LOCK TABLES `point` WRITE;
 /*!40000 ALTER TABLE `point` DISABLE KEYS */;
-INSERT INTO `point` VALUES ('1','1','1',10,9,10,8),('10','4','10',10,4,9,3),('11','4','11',10,7,2,9),('2','1','2',8,7,9,1),('3','2','3',9,8,9,10),('4','2','4',10,8,8,10),('5','2','5',6,8,8,10),('6','3','6',10,8,8,6),('7','3','7',6,5.5,8,6),('8','3','8',7,5,8,7),('9','4','9',9,9.5,8,4);
+INSERT INTO `point` VALUES ('1','1','1',10,9,10,8),('10','4','10',10,4,9,3),('11','4','11',10,1,2,0),('12','1','12',10,10,8,9),('13','1','13',10,3,7,10),('14','1','14',8,4,8,8),('15','1','15',9,6,6,6),('16','1','16',7,7,5,7),('17','2','17',7,8,6,5),('18','2','18',8,9,7,4),('19','2','19',6,8,8,4),('2','1','2',6.7,7,0,9),('20','2','20',7,7,5,3),('21','2','21',8,8,6,5),('22','3','22',9,7,5,6),('23','3','23',6,7,6,7),('24','3','24',7,8,7,8),('25','4','25',8,6,6,10),('26','4','26',9,6,7,8),('27','4','27',5,5,5,7),('28','4','28',6,7,8,9),('3','2','3',9,8,9,10),('4','2','4',10,8,8,10),('5','3','5',6,8,8,10),('6','3','6',10,8,8,6),('7','3','7',6,5.5,8,6),('8','3','8',7,5,8,7),('9','4','9',9,9.5,8,4);
 /*!40000 ALTER TABLE `point` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -130,7 +130,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('1','2','HoaiNam','B17DCCN452'),('10','11','Mai','B17DCCN472'),('11','12','Bac','B17DCCN092'),('2','3','HOA','B17DCCN877'),('3','4','bao','B17DCCN871'),('4','5','Kim','B17DCCN111'),('5','6','Long','B17DCCN231'),('6','7','Quyen','B17DCCN763'),('7','8','Chat','B17DCCN078'),('8','9','Song','B17DCCN113'),('9','10','Lan','B17DCCN362');
+INSERT INTO `student` VALUES ('1','2','Trần Hoài Nam','B17DCCN452'),('10','11','Nguyễn Đức Nam','B17DCCN472'),('11','12','Bùi Văn Hòa','B17DCCN092'),('12','13','Nguyễn Thạc Dương','B17DCCN642'),('13','14','Trịnh Việt Hoàng','B17DCCN666'),('14','15','Đặng Anh Quân','B17DCCN071'),('15','16','Trần Trọng Hoàng Hà','B17DCCN164'),('16','17','Nguyễn Văn Tú','B17DCCN510'),('17','18','Phùng Đình Tùng','B17DCCN462'),('18','19','Hà Đăng Biên','B17DCCN570'),('19','20','Trần Ngọc Dũng','B17DCCN546'),('2','3','Nguyễn Thế Nghị','B17DCCN877'),('20','21','Lê Minh Hiếu','B17DCCN298'),('21','22','Nguyễn Minh Quang','B17DCCN490'),('22','23','Nguyễn Huy Nghĩa','B17DCCN562'),('23','24','Hoàng Thế Quyền','B17DCCN318'),('24','25','Nguyễn Văn Thành','B17DCCN041'),('25','26','Lê Khắc Phúc','B17DCCN149'),('26','27','Nguyễn Đức Thắng','B17DCCN310'),('27','28','Đỗ Xuân Sang','B17DCCN334'),('28','29','Nguyễn Văn Toàn','B17DCCN286'),('3','4','Phùng Xuân Nam','B17DCCN871'),('4','5','Trần Văn Độ','B17DCCN111'),('5','6','Nguyễn Thế Quyền','B17DCCN231'),('6','7','Đào Đức Long','B17DCCN763'),('7','8','Nguyễn Xuân Phúc','B17DCCN078'),('8','9','Kim Văn Trường','B17DCCN113'),('9','10','Đỗ Minh Tiến','B17DCCN362');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -210,7 +210,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('1','demo','1234567','teacher'),('10','nam','1','student'),('11','9','9','student'),('12','10','10','student'),('2','thao','1','student'),('3','lol','2','student'),('4','2','1','student'),('5','3','3','student'),('6','4','4','student'),('7','5','5','student'),('8','6','6','student'),('9','7','7','student');
+INSERT INTO `user` VALUES ('1','demo','1234567','teacher'),('10','nam','1','student'),('11','9','9','student'),('12','10','10','student'),('13','8','8','student'),('14','9','9','student'),('15','10','10','student'),('16','11','11','student'),('17','12','12','student'),('18','13','13','student'),('19','14','14','student'),('2','thao','1','student'),('20','15','15','student'),('21','16','16','student'),('22','17','17','student'),('23','18','18','student'),('24','19','19','student'),('25','20','20','student'),('26','21','21','student'),('27','22','22','student'),('28','23','23','student'),('29','24','24','student'),('3','lol','2','student'),('4','2','1','student'),('5','3','3','student'),('6','4','4','student'),('7','5','5','student'),('8','6','6','student'),('9','7','7','student');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -227,4 +227,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-27 22:10:51
+-- Dump completed on 2021-05-28 15:51:57
