@@ -82,10 +82,10 @@ public class EditpointSuccess extends HttpServlet {
             
             for (BangDiem listBangDiem : listBangDiems) {
                 if (listBangDiem.getPoint().getDKDT() == 0) {
-                    countDK ++;
+                     coutKDK ++;
                 }
                 else{
-                    coutKDK ++;
+                    countDK ++;
                 }
             }
             sesion.setAttribute("duDK", countDK);
