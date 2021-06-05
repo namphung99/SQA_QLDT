@@ -105,6 +105,7 @@ public class PointDAOTest extends DAO{
 //        check DB thay đổi
         Point finalPoint = instance.getPointByIdStudent(idStudent);
         System.out.println("DB thay đổi: " + finalPoint);
+        assertNotEquals(initPoint, finalPoint);
         
         assertEquals(expResult, result);
         //        rollback
@@ -167,6 +168,9 @@ public class PointDAOTest extends DAO{
         
         assertEquals(expResult, result);
         
+        // db thay đổi
+        assertEquals(initPoint, finalPoint);
+        
     }
     
     @Test
@@ -191,6 +195,9 @@ public class PointDAOTest extends DAO{
         instance.editPoint(rollbackPoint, idStudent);
         assertEquals(expResult, result);
         
+//        check db
+        assertEquals(initPoint, finalPoint);
+        
     }
     @Test
     public void testEditPointWithPointEquals0(){
@@ -201,14 +208,15 @@ public class PointDAOTest extends DAO{
         Point initPoint = instance.getPointByIdStudent(idStudent);
         System.out.println("điểm ban đầu: " + initPoint);
         
+        
         boolean expResult =true;
         boolean result = instance.editPoint(point, idStudent);
         
         //        check DB thay đổi
         Point finalPoint = instance.getPointByIdStudent(idStudent);
         System.out.println("DB thay đổi: " + finalPoint);
+        assertNotEquals(initPoint, finalPoint);
         assertEquals(expResult, result);
-        
         //        rollback
         Point rollbackPoint= new Point("1", (float) initPoint.getCC(), 
                 (float) initPoint.getTP1(), (float) initPoint.getTP2(),(float) initPoint.getDT());
@@ -230,8 +238,8 @@ public class PointDAOTest extends DAO{
         //        check DB thay đổi
         Point finalPoint = instance.getPointByIdStudent(idStudent);
         System.out.println("DB thay đổi: " + finalPoint);
+        assertNotEquals(initPoint, finalPoint);
         assertEquals(expResult, result);
-        
         //        rollback
         Point rollbackPoint= new Point("1", (float) initPoint.getCC(), 
                 (float) initPoint.getTP1(), (float) initPoint.getTP2(),(float) initPoint.getDT());
@@ -252,8 +260,8 @@ public class PointDAOTest extends DAO{
         //        check DB thay đổi
         Point finalPoint = instance.getPointByIdStudent(idStudent);
         System.out.println("DB thay đổi: " + finalPoint);
+        assertNotEquals(initPoint, finalPoint);
         assertEquals(expResult, result);
-        
         //        rollback
         Point rollbackPoint= new Point("1", (float) initPoint.getCC(), 
                 (float) initPoint.getTP1(), (float) initPoint.getTP2(),(float) initPoint.getDT());

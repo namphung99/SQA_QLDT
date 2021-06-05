@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: DAO.PointDAOTest
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec <<< FAILURE! - in DAO.PointDAOTest
-testEditPointWithPointNegativeInteger(DAO.PointDAOTest)  Time elapsed: 0.023 sec  <<< FAILURE!
+Tests run: 13, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.767 sec <<< FAILURE! - in DAO.PointDAOTest
+testEditPointWithPointNegativeInteger(DAO.PointDAOTest)  Time elapsed: 0.027 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<false> but was:<true>
-	at DAO.PointDAOTest.testEditPointWithPointNegativeInteger(PointDAOTest.java:192)
+	at DAO.PointDAOTest.testEditPointWithPointNegativeInteger(PointDAOTest.java:196)
 
-testEditPointWithPointExceeding(DAO.PointDAOTest)  Time elapsed: 0.015 sec  <<< FAILURE!
+testEditPointWithPointExceeding(DAO.PointDAOTest)  Time elapsed: 0.016 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<false> but was:<true>
-	at DAO.PointDAOTest.testEditPointWithPointExceeding(PointDAOTest.java:168)
+	at DAO.PointDAOTest.testEditPointWithPointExceeding(PointDAOTest.java:169)
 
